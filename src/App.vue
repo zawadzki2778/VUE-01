@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MyEmail from "@/component/MyEmail.vue"
+import MyEmail from "@/components/MyEmail.vue"
 export default {
   name: "App",
   components: { MyEmail },
