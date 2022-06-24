@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <label>
-      введите email:
+      введите e-mail:
       <input type="email" :value="email" @input="addMail" />
     </label>
     <label>
@@ -23,6 +23,7 @@ export default {
   methods: {
     addMail(event) {
       this.email = event.target.value;
+      console.log(event.target.value);
     },
     addPassword(event) {
       this.password = event.target.value;
@@ -30,3 +31,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.root {
+  margin-top: 40px;
+}
+</style>
