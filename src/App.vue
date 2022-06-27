@@ -2,15 +2,17 @@
   <div id="app">
     <my-email />
     <add-count />
+    <user-card />
   </div>
 </template>
 
 <script>
 import MyEmail from "@/components/MyEmail.vue";
 import AddCount from "@/components/AddCount.vue";
+import UserCard from "@/components/UserCard.vue";
 export default {
   name: "App",
-  components: { MyEmail, AddCount },
+  components: { MyEmail, AddCount, UserCard },
 };
 </script>
 
