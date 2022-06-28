@@ -3,7 +3,7 @@
     <div class="card">
       <h2>список пользователей</h2>
       <div class="list">
-        Сейчас у нас <span>{{ users.length }}</span> человек
+        cейчас у нас <span>{{ users.length }}</span> человек
         <div class="items">
           <ul>
             <li v-for="(user, index) in users" :key="index">
@@ -50,14 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 ul {
-  list-style-type: none;
   border: 3px solid purple;
-}
-span {
-  color: rgb(0, 55, 114);
-  text-shadow: 2px;
-  font-weight: bold;
-  font-style: italic;
 }
 .items {
     text-align: center;
