@@ -1,12 +1,12 @@
 <template>
   <div class="search">
     <h2>поиск имени</h2>
-    <input type="text" :value="enterName" />
+    <input type="text" @input="enterName = $event.target.value" />
     <p>
-      всего имён: <span> {{ users.length }} </span>, совпадений:
+      всего имён: <span> {{ users.length }} </span>, совпадений: <span> {{ getUser.length }} </span>
     </p>
     <ul>
-      <li v-for="(user, index) in users" :key="index">
+      <li v-for="(user, index) in getUser" :key="index">
         {{ user }}
       </li>
     </ul>
@@ -21,6 +21,13 @@ export default {
       enterName: "",
       users: ["Женя", "Максим", "Артур", "Павел", "Марьян", "Александр"],
     };
+  },
+  computed: {
+    getUser() {
+      return this.users.filter((user) =>
+        user.toLowerCase().includes(this.enterName.toLowerCase())
+      );
+    },
   },
 };
 </script>
