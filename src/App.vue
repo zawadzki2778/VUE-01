@@ -4,6 +4,7 @@
     <add-count />
     <user-card />
     <search-name />
+    <redact-photo />
   </div>
 </template>
 
@@ -11,10 +12,11 @@
 import MyEmail from "@/components/MyEmail.vue";
 import AddCount from "@/components/AddCount.vue";
 import UserCard from "@/components/UserCard.vue";
-import SearchName from "@/components/SearchName.vue"
+import SearchName from "@/components/SearchName.vue";
+import RedactPhoto from "@/components/RedactPhoto.vue";
 export default {
   name: "App",
-  components: { MyEmail, AddCount, UserCard, SearchName },
+  components: { MyEmail, AddCount, UserCard, SearchName, RedactPhoto },
 };
 </script>
 
