@@ -60,6 +60,8 @@ export default {
 }
 img {
   transition: 0.2s ease;
+  width: 100%;
+  height: 240px;
   &.sepia {
     filter: sepia(100%);
   }
@@ -74,7 +76,7 @@ img {
 button {
   margin-right: 10px;
   &.active {
-    background-color: #addfff;
+    background-color: #01609b;
   }
 }
 .filters {
