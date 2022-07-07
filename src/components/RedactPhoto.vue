@@ -1,24 +1,25 @@
 <template>
-  <div class="redact">
+  <div class="conteiner">
     <div class="flex">
       <div class="photo">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUt3vqN53q0gDCX5inoL21SMMt-w9TR5hUwA&usqp=CAU"
-          alt="my photo))"
-        />
-        <p>Собачка вышла на прогулку</p>
+        <img v-if="isVisible" src="../assets/dessert-7291251__340.jpg" />
+        <p v-else>Мороженое закончилось ...<b> ) </b></p>
       </div>
-      <div class="filters">
-        <label>
-          Ширина
-          <input type="range" />
-        </label>
-        <label>
-          Высота
-          <input type="range" />
-        </label>
+      <div class="redact">
+        <div class="filters">
+          <label>
+            Ширина
+            <input type="range" />
+          </label>
+          <label>
+            Высота
+            <input type="range" />
+          </label>
+        </div>
+        <button>сепия</button>
+        <button>рамка</button>
+        <button @click="isVisible = !isVisible">показать / закрыть</button>
       </div>
-      <div class="buttons"></div>
     </div>
   </div>
 </template>
@@ -26,28 +27,60 @@
 <script>
 export default {
   name: "RedactPhoto",
+  data() {
+    return {
+      isVisible: true,
+      imgFilters: {
+        sepia: false,
+        border: false,
+        small: false,
+      },
+      imgSizes: {
+        maxWidth: 340,
+        maxHeight: 240,
+        currentWidth: 340,
+        currentHeight: 240,
+      },
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.flex {
-  display: flex;
-  justify-content: space-around;
-  .photo {
-    width: 60vw; /* Ширина */
-    height: 30vh; /* Высота */
+  .container {
+  margin-top: 40px;
+}
+.redact {
+  margin-left: 50px;
+}
+.photo {
+  width: 340px;
+  height: 240px;
+  background-color: #cecece;
+}
+img {
+  transition: 0.2s ease;
+  &.sepia {
+    filter: sepia(100%);
   }
-  .filters {
-    background-color: rgb(168, 224, 255);
-    flex-wrap: nowrap;
-    padding: 10px;
-    width: 60vw; /* Ширина */
-    height: 30vh; /* Высота */
+  &.border {
+    border: 3px solid #043544;
   }
-  .buttons {
-    background-color: rgb(255, 121, 121);
-    width: 60vw; /* Ширина */
-    height: 30vh; /* Высота */
+  &.small {
+    width: 170px;
+    height: 120px;
   }
+}
+button {
+  margin-right: 10px;
+  &.active {
+    background-color: #addfff;
+  }
+}
+.filters {
+  margin-bottom: 20px;
+}
+input[type="range"] {
+  display: block;
 }
 </style>
