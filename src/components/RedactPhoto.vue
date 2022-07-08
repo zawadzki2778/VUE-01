@@ -2,23 +2,40 @@
   <div class="conteiner">
     <div class="flex">
       <div class="photo">
-        <img v-if="isVisible" src="../assets/dessert-7291251__340.jpg" />
+        <img
+          v-if="isVisible"
+          src="../assets/dessert-7291251__340.jpg"
+          :class="imgFilters"
+          :style="imgStyles"
+        />
         <p v-else>Мороженое закончилось ...<b> ) </b></p>
       </div>
       <div class="redact">
         <div class="filters">
           <label>
-            Ширина
-            <input type="range" />
+            Ширина {{ imgSizes.currentWidth }}
+            <input
+              type="range"
+              :value="imgSizes.currentWidth"
+              @input="imgSizes.currentWidth = $event.target.value"
+              :max="imgSizes.maxWidth"
+            />
           </label>
           <label>
-            Высота
-            <input type="range" />
+            Высота {{ imgSizes.currentHeight }}
+            <input
+              type="range"
+              :value="imgSizes.currentHeight"
+              @input="imgSizes.currentHeight = $event.target.value"
+              :max="imgSizes.maxHeight"
+            />
           </label>
         </div>
         <button>сепия</button>
         <button>рамка</button>
-        <button @click="isVisible = !isVisible"> {{ `${ isVisible ? 'скрыть' : 'показать' }` }} </button>
+        <button @click="isVisible = !isVisible">
+          {{ `${isVisible ? "скрыть" : "показать"}` }}
+        </button>
       </div>
     </div>
   </div>
@@ -43,6 +60,14 @@ export default {
       },
     };
   },
+  computed: {
+    imgStyles() {
+      return {
+        width: `${this.imgSizes.currentWidth}px`,
+        height: `${this.imgSizes.currentHeight}px`,
+      };
+    },
+  },
 };
 </script>
 
@@ -60,17 +85,13 @@ export default {
 }
 img {
   transition: 0.2s ease;
-  width: 100%;
+  width: 340px;
   height: 240px;
   &.sepia {
     filter: sepia(100%);
   }
   &.border {
     border: 3px solid #043544;
-  }
-  &.small {
-    width: 170px;
-    height: 120px;
   }
 }
 button {
