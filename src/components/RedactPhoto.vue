@@ -18,7 +18,7 @@
         </div>
         <button>сепия</button>
         <button>рамка</button>
-        <button @click="isVisible = !isVisible">показать / закрыть</button>
+        <button @click="isVisible = !isVisible"> {{ `${ isVisible ? 'скрыть' : 'показать' }` }} </button>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .container {
+.container {
   margin-top: 40px;
 }
 .redact {
