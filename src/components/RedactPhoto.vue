@@ -31,8 +31,8 @@
             />
           </label>
         </div>
-        <button>сепия</button>
-        <button>рамка</button>
+        <button @click="imgFilters.sepia = !imgFilters.sepia">сепия</button>
+        <button @click="imgFilters.border = !imgFilters.border">рамка</button>
         <button @click="isVisible = !isVisible">
           {{ `${isVisible ? "скрыть" : "показать"}` }}
         </button>
@@ -50,7 +50,6 @@ export default {
       imgFilters: {
         sepia: false,
         border: false,
-        small: false,
       },
       imgSizes: {
         maxWidth: 340,
@@ -74,6 +73,12 @@ export default {
 <style lang="scss" scoped>
 .container {
   margin-top: 40px;
+  border: 3px solid purple;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  border: 3px solid purple;
 }
 .redact {
   margin-left: 50px;
@@ -84,6 +89,8 @@ export default {
   background-color: #cecece;
 }
 img {
+  display: block;
+  margin: 0 auto;
   transition: 0.2s ease;
   width: 340px;
   height: 240px;
@@ -91,7 +98,7 @@ img {
     filter: sepia(100%);
   }
   &.border {
-    border: 3px solid #043544;
+    border: 3px solid #fffc57;
   }
 }
 button {
@@ -101,7 +108,7 @@ button {
   }
 }
 .filters {
-  margin-bottom: 20px;
+  margin: 20px 50px;
 }
 input[type="range"] {
   display: block;
