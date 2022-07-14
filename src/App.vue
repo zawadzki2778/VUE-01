@@ -5,6 +5,7 @@
     <user-card />
     <search-name />
     <redact-photo />
+    <revers-text />
   </div>
 </template>
 
@@ -14,9 +15,10 @@ import AddCount from "@/components/AddCount.vue";
 import UserCard from "@/components/UserCard.vue";
 import SearchName from "@/components/SearchName.vue";
 import RedactPhoto from "@/components/RedactPhoto.vue";
+import ReversText from "@/components/ReversText.vue";
 export default {
   name: "App",
-  components: { MyEmail, AddCount, UserCard, SearchName, RedactPhoto },
+  components: { MyEmail, AddCount, UserCard, SearchName, RedactPhoto, ReversText },
 };
 </script>
 
