@@ -1,25 +1,13 @@
 <template>
   <div class="product-list">
-    <div class="flex top-information">
-      <h1>Письменные столы</h1>
-      <my-input v-model="searchText" />
-      {{ searchText }}
-      <button>
-        Найти
-      </button>
-    </div>
-    
-    <ul class="list-default flex">
-      <li
-        v-for="(product, index) in products"
-        :key="index"
-      >
+    <h3>велосипеды</h3>
+    <ul class="list">
+      <li v-for="(product, index) in products" :key="index">
         <product-card
           :title="product.title"
-          :price="product.price"
-          :img-url="product.imgUrl"
+          :pice="product.price"
+          :imgUrl="product.imgUrl"
           :count="product.count"
-          @addToBasket="addToBasket(index)"
         />
       </li>
     </ul>
@@ -27,64 +15,36 @@
 </template>
 
 <script>
-import ProductCard from './ProductCard'
-import MyInput from './MyInput'
+import ProductCard from "./ProductCard.vue";
 
 export default {
-  name: 'ProductList',
-  components: { ProductCard, MyInput },
+  name: "ProductList",
+  components: { ProductCard },
   data() {
     return {
-      searchText: '',
       products: [
         {
-          title: 'Стол Jim',
-          price: 19999,
-          imgUrl: 'https://hoff.ru/upload/iblock/8c9/8c989500ee8639b9e3aa267b1888b4af.jpg',
-          count: 30
+          title: "Велосипед Деревяшка",
+          price: 745,
+          imgUrl:
+            "https://naked-science.ru/wp-content/uploads/2016/04/article_sandwichbike-bici-armable-4.jpg",
+          count: 33,
         },
         {
-          title: 'Стол Monako',
-          price: 17199,
-          imgUrl: 'https://hoff.ru/upload/iblock/af2/af2d37161f217d4f489373be7da4a7a0.jpg',
-          count: 20
+          title: "Велосипед Космо",
+          price: 666,
+          imgUrl:
+            "https://ixbt.online/live/images/original/03/53/89/2022/06/01/b50e62c842.jpg",
+          count: 51,
         },
         {
-          title: 'Стол с двумя ящиками Кварт MD 768',
-          price: 10999,
-          imgUrl: 'https://hoff.ru/upload/iblock/1cc/1ccb33b50e3e9cfa08629bf455e41855.jpg',
-          count: 23
-        }
-      ]
-    }
+          title: "Велосипед Яблоко",
+          price: 999,
+          imgUrl: "http://moy.bike/wp-content/uploads/apple-velo.jpg",
+          count: 6,
+        },
+      ],
+    };
   },
-  methods: {
-    addToBasket(index) {
-      console.log(index)
-    }
-  }
-}
+};
 </script>
-
-<style lang="scss" scoped>
-li {
-  margin-right: 20px;
-}
-.top-information {
-  align-items: center;
-  h1 {
-    margin-bottom: 0;
-  }
-  button {
-    background-color: rgb(221, 56, 56);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 14px;
-    display: block;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  margin-bottom: 22px;
-}
-</style>
