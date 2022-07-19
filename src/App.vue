@@ -6,7 +6,6 @@
     <search-name />
     <redact-photo />
     <revers-text />
-    <product-card />
     <product-list />
   </div>
 </template>
@@ -17,9 +16,8 @@ import AddCount from "@/components/AddCount.vue";
 import UserCard from "@/components/UserCard.vue";
 import SearchName from "@/components/SearchName.vue";
 import RedactPhoto from "@/components/RedactPhoto.vue";
-import ReversText from "@/components/ReversText.vue";
-import ProductCard from "@/components/ProductCard.vue";
-import ProductList from "./components/ProductList.vue";
+import ReversText from "@/components/ReversText.vue"; // import ProductCard from "@/components/ProductCard.vue";
+import ProductList from "@/components/ProductList.vue";
 export default {
   name: "App",
   components: {
@@ -29,7 +27,6 @@ export default {
     SearchName,
     RedactPhoto,
     ReversText,
-    ProductCard,
     ProductList,
   },
 };

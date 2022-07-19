@@ -1,9 +1,8 @@
 <template>
   <div class="product-list">
-    <h3>велосипеды</h3>
+    <h1>ВЕЛОСИПЕДЫ</h1>
     <ul class="list">
-      <li 
-          v-for="(product, index) in products" :key="index">
+      <li v-for="(product, index) in products" :key="index">
         <product-card
           :title="product.title"
           :pice="product.price"
@@ -35,7 +34,7 @@ export default {
           title: "Велосипед Космо",
           price: 666,
           imgUrl:
-            "https://ixbt.online/live/images/original/03/53/89/2022/06/01/b50e62c842.jpg",
+            "https://thumb.tildacdn.com/tild6134-3062-4864-a130-663337633233/-/resize/480x/-/format/webp/11-1500x1500.jpg",
           count: 51,
         },
         {
