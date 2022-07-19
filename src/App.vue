@@ -7,6 +7,7 @@
     <redact-photo />
     <revers-text />
     <product-card />
+    <product-list />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import SearchName from "@/components/SearchName.vue";
 import RedactPhoto from "@/components/RedactPhoto.vue";
 import ReversText from "@/components/ReversText.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import ProductList from "./components/ProductList.vue";
 export default {
   name: "App",
   components: {
@@ -28,6 +30,7 @@ export default {
     RedactPhoto,
     ReversText,
     ProductCard,
+    ProductList,
   },
 };
 </script>

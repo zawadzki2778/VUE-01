@@ -2,11 +2,12 @@
   <div class="product-list">
     <h3>велосипеды</h3>
     <ul class="list">
-      <li v-for="(product, index) in products" :key="index">
+      <li 
+          v-for="(product, index) in products" :key="index">
         <product-card
           :title="product.title"
           :pice="product.price"
-          :imgUrl="product.imgUrl"
+          :img-url="product.imgUrl"
           :count="product.count"
         />
       </li>
