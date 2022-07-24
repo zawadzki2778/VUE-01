@@ -5,6 +5,7 @@
     <p>
       всего имён: <span> {{ users.length }} </span>, совпадений: <span> {{ getUser.length }} </span>
     </p>
+    
     <ul>
       <li v-for="(user, index) in getUser" :key="index">
         {{ user }}
@@ -19,7 +20,7 @@ export default {
   data() {
     return {
       enterName: "",
-      users: ["Виточка", "Женя", "Максим", "Артур", "Павел", "Марьян", "Александр"],
+      users: ["Виточка", "Женя", "Максим", "Артур", "Павел", "Марьян", "Александр", "Миша", "Панда"],
     };
   },
   computed: {

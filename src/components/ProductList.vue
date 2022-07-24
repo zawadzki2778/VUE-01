@@ -1,16 +1,18 @@
 <template>
   <div class="product-list">
-    <h1>ВЕЛОСИПЕДЫ</h1>
-    <ul class="list">
-      <li v-for="(product, index) in products" :key="index">
-        <product-card
-          :title="product.title"
-          :pice="product.price"
-          :img-url="product.imgUrl"
-          :count="product.count"
-        />
-      </li>
-    </ul>
+    <h2>МАГАЗИН ВЕЛОСИПЕДОВ</h2>
+    <div class="product-card">
+      <ul class="list">
+        <li v-for="(product, index) in products" :key="index" height="510px">
+          <product-card
+            :title="product.title"
+            :price="product.price"
+            :img-url="product.imgUrl"
+            :count="product.count"
+          />
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -48,3 +50,14 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.product-list {
+  margin-top: 50px;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline; //сделал названия и хар-ки товаров по одной оси
+}
+</style>
