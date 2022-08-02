@@ -29,7 +29,7 @@ export default {
           title: "Велосипед Деревяшка",
           price: 745,
           imgUrl:
-            "https://naked-science.ru/wp-content/uploads/2016/04/article_sandwichbike-bici-armable-4.jpg",
+            "https://img-global.cpcdn.com/recipes/5075e3182458e4120903b26cb7397aa749da58846a1c65a9dca8b1122b5a6403/680x482cq70/salat-ryba-kloun-ili-moi-liubimyi-niemo-s-ineta-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5-%D1%84%D0%BE%D1%82%D0%BE-%D1%80%D0%B5%D1%86%D0%B5%D0%BF%D1%82%D0%B0.jpg",
           count: 33,
         },
         {

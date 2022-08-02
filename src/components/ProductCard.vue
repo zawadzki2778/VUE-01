@@ -1,6 +1,6 @@
 <template>
   <div class="product-card">
-    <img :src="imgSrc" width="300px" />
+    <img :src="imgUrl" width="300px" />
     <div class="product-card__info">
       <h3>{{ title }}</h3>
       <p class="price">{{ price }} рублей</p>
@@ -16,7 +16,7 @@ export default {
   props: {
     title: String,
     price: Number,
-    imgSrc: {
+    imgUrl: {
       type: String,
       default:
         "https://img.freepik.com/premium-vector/photo-frame-icon-empty-photo-blank-vector-on-isolated-transparent-background-eps-10_399089-1290.jpg?w=2000",
