@@ -5,7 +5,7 @@
       <h3>{{ title }}</h3>
       <p class="price">{{ price }} рублей</p>
       <p class="count">на складе {{ count }} шт.</p>
-      <button type="button">в корзину</button>
+      <button type="button" @click="addGoods">в корзину</button>
     </div>
   </div>
 </template>
@@ -26,6 +26,11 @@ export default {
       default: 0,
     },
   },
+  methods: {
+    addGoods() {
+      this.$emit('addGoods')
+    }
+  }
 };
 </script>
 
