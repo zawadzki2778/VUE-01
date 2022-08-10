@@ -1,9 +1,12 @@
 <template>
   <div class="product-list">
-    <h2>МАГАЗИН ВЕЛОСИПЕДОВ</h2>
     <div class="product-card">
+      <h2>МАГАЗИН ВЕЛОСИПЕДОВ</h2>
+      <my-input v-model="searchText" />
+      {{ searchText }}
+      <button>поиск</button>
       <ul class="list">
-        <li v-for="(product, index) in products" :key="index" height="510px">
+        <li v-for="(product, index) in products" :key="index">
           <product-card
             :title="product.title"
             :price="product.price"
@@ -19,12 +22,13 @@
 
 <script>
 import ProductCard from "./ProductCard.vue";
-
+import MyInput from "./MyInput.vue";
 export default {
   name: "ProductList",
-  components: { ProductCard },
+  components: { ProductCard, MyInput },
   data() {
     return {
+      searchText: "",
       products: [
         {
           title: "Велосипед Деревяшка",
@@ -34,8 +38,7 @@ export default {
         {
           title: "Велосипед Космо",
           price: 666,
-          imgUrl:
-            "https://thumb.tildacdn.com/tild6134-3062-4864-a130-663337633233/-/resize/480x/-/format/webp/11-1500x1500.jpg",
+          imgUrl: "/features_type5_1.jpg",
           count: 51,
         },
         {
@@ -63,5 +66,14 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: baseline; //сделал названия и хар-ки товаров по одной оси
+}
+button {
+  background-color: rgb(221, 56, 56);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 </style>

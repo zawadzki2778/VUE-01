@@ -1,6 +1,6 @@
 <template>
   <div class="product-card">
-    <img :src="imgUrl" width="300px" />
+    <img :src="imgUrl" />
     <div class="product-card__info">
       <h3>{{ title }}</h3>
       <p class="price">{{ price }} рублей</p>
@@ -28,13 +28,17 @@ export default {
   },
   methods: {
     addGoods() {
-      this.$emit('addGoods')
-    }
-  }
+      this.$emit("addGoods");
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+img {
+  width: 300px;
+  object-fit: fill;
+}
 .product-card {
   margin-top: 40px;
   background-color: rgb(160, 212, 252);
