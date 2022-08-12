@@ -7,6 +7,7 @@
     <redact-photo />
     <revers-text />
     <product-list />
+    <acync-await />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import SearchName from "@/components/SearchName.vue";
 import RedactPhoto from "@/components/RedactPhoto.vue";
 import ReversText from "@/components/ReversText.vue"; // import ProductCard from "@/components/ProductCard.vue";
 import ProductList from "@/components/ProductList.vue";
+import AcyncAwait from "@/components/AcyncAwait.vue";
 export default {
   name: "App",
   components: {
@@ -28,6 +30,7 @@ export default {
     RedactPhoto,
     ReversText,
     ProductList,
+    AcyncAwait,
   },
 };
 </script>
@@ -49,5 +52,4 @@ span {
   text-shadow: 5px;
   font-weight: bold;
 }
-
 </style>
