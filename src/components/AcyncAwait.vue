@@ -1,7 +1,22 @@
 <template>
-  <div>
-    <h2>получаем</h2>
-    <h2>{{ users[2].city }} передаёт привет Серёге от {{ users[0].name }}</h2>
+  <div class="mocki">
+    <h2>{{ title }}</h2>
+    <hr />
+    <h2>USERS DATA</h2>
+    <div class="user" v-for="(user, index) in users" :key="index">
+      <hr />
+      <ul>
+        <li>{{ user.id }}</li>
+        <li>{{ user.title }}</li>
+      </ul>
+      <button @click="userData(user)">получить</button>
+    </div>
+    <hr />
+    <h2>ERRORS</h2>
+    <div class="error" v-for="(error, index) in errors" :key="index">
+      <p>{{ errors }}</p>
+      <hr />
+    </div>
   </div>
 </template>
 
@@ -10,17 +25,30 @@ export default {
   name: "AcyncAwait",
   data() {
     return {
-      title: "получаем VUE",
+      title: "получаем данные с фейк-сервера",
       users: [],
-      result: {},
+      errors: [],
     };
   },
-  async mounted() {
-    const response = await fetch(
-      "https://mocki.io/v1/dd6120b0-8539-4dc3-b405-2291071dc0ea"
-    );
-    this.users = await response.json();
-    console.log(this.users);
+  mounted() {
+    this.getUserData();
+  },
+  methods: {
+    async getUserData() {
+      const response = await fetch(
+        "https://mocki.io/v1/10d2c740-0b77-4f17-97e5-d8dcdcf320b8"
+      );
+      try {
+        this.users = await response.json();
+        console.log(this.users);
+      } catch (errror) {
+        this.errors = await response.json();
+        console.log(this.errors);
+      }
+    },
+    userData(user) {
+      console.log(user.body);
+    },
   },
 };
 </script>
