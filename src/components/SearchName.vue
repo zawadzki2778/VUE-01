@@ -1,11 +1,12 @@
 <template>
   <div class="search">
     <h2>поиск имени</h2>
-    <input type="text" @input="enterName = $event.target.value" />
+    <input type="text" v-model="enterName" />
     <p>
-      всего имён: <span> {{ users.length }} </span>, совпадений: <span> {{ getUser.length }} </span>
+      всего имён: <span> {{ users.length }} </span>, 
+      совпадений: <span> {{ getUser.length }} </span>
     </p>
-    
+
     <ul>
       <li v-for="(user, index) in getUser" :key="index">
         {{ user }}
@@ -20,7 +21,17 @@ export default {
   data() {
     return {
       enterName: "",
-      users: ["Виточка", "Женя", "Максим", "Артур", "Павел", "Марьян", "Александр", "Миша", "Панда"],
+      users: [
+        "Виточка",
+        "Женя",
+        "Максим",
+        "Артур",
+        "Павел",
+        "Марьян",
+        "Александр",
+        "Миша",
+        "Панда",
+      ],
     };
   },
   computed: {
