@@ -1,26 +1,23 @@
 <template>
   <div class="mocki">
     <h2>{{ title }}</h2>
-    <hr />
-    <h2>USERS DATA</h2>
     <div class="user" v-for="(user, index) in users" :key="index">
-      <hr />
+      <my-title :run="user.id" />
       <ul>
-        <li>{{ user.id }}</li>
-        <li>{{ user.title }}</li>
+        <li>{{ user.body }}</li>
       </ul>
       <button @click="userData(user)">получить</button>
+      <hr />
     </div>
-    <hr />
     <h2>ERRORS</h2>
     <div class="error" v-for="(error, index) in errors" :key="index">
       <p>{{ errors }}</p>
-      <hr />
     </div>
   </div>
 </template>
 
 <script>
+import MyTitle from "@/components/MyTitle.vue";
 export default {
   name: "AcyncAwait",
   data() {
@@ -47,9 +44,10 @@ export default {
       }
     },
     userData(user) {
-      console.log(user.body);
+      console.log(user.userId);
     },
   },
+  components: { MyTitle },
 };
 </script>
 
