@@ -1,4 +1,6 @@
 <template>
+  <!-- <h1>ROUTER</h1>
+<router-view></router-view> -->
   <div id="app">
     <my-email />
     <add-count />
@@ -17,7 +19,7 @@ import AddCount from "@/components/AddCount.vue";
 import UserCard from "@/components/UserCard.vue";
 import SearchName from "@/components/SearchName.vue";
 import RedactPhoto from "@/components/RedactPhoto.vue";
-import ReversText from "@/components/ReversText.vue"; // import ProductCard from "@/components/ProductCard.vue";
+import ReversText from "@/components/ReversText.vue";
 import ProductList from "@/components/ProductList.vue";
 import AcyncAwait from "@/components/AcyncAwait.vue";
 export default {
