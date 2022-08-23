@@ -1,16 +1,16 @@
 <template>
-  <!-- <h1>ROUTER</h1>
-<router-view></router-view> -->
-  <div id="app">
-    <my-email />
-    <add-count />
-    <user-card />
-    <search-name />
-    <redact-photo />
-    <revers-text />
-    <product-list />
-    <acync-await />
-  </div>
+  <router-wiew>
+    <div id="app">
+      <my-email />
+      <add-count />
+      <user-card />
+      <search-name />
+      <redact-photo />
+      <revers-text />
+      <product-list />
+      <acync-await />
+    </div>
+  </router-wiew>
 </template>
 
 <script>
