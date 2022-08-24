@@ -1,39 +1,12 @@
 <template>
-  <router-wiew>
-    <div id="app">
-      <my-email />
-      <add-count />
-      <user-card />
-      <search-name />
-      <redact-photo />
-      <revers-text />
-      <product-list />
-      <acync-await />
-    </div>
-  </router-wiew>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import MyEmail from "@/components/MyEmail.vue";
-import AddCount from "@/components/AddCount.vue";
-import UserCard from "@/components/UserCard.vue";
-import SearchName from "@/components/SearchName.vue";
-import RedactPhoto from "@/components/RedactPhoto.vue";
-import ReversText from "@/components/ReversText.vue";
-import ProductList from "@/components/ProductList.vue";
-import AcyncAwait from "@/components/AcyncAwait.vue";
 export default {
   name: "App",
-  components: {
-    MyEmail,
-    AddCount,
-    UserCard,
-    SearchName,
-    RedactPhoto,
-    ReversText,
-    ProductList,
-    AcyncAwait,
-  },
 };
 </script>
 

@@ -25,5 +25,6 @@ export default new VueRouter({
         { path: '/nine', component: RevesText },
         { path: '/ten', component: SearchName },
         { path: '/eleven', component: UserCard },
-    ]
+    ],
+    mode: 'history'
 }) 
