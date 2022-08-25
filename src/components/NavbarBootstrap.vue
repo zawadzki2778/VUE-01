@@ -11,19 +11,18 @@
 
     <b-collapse id="navbar-toggle-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
+        <b-nav-item @click="$router.push({ name: 'MainPage' })">главная страница</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'AcyncAwait' })">запрос на сервер</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'AddCount' })">счётчик</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'MyEmail' })">e-mail и пароль</b-nav-item>
-        <!-- <b-nav-item @click="$router.push({ name: 'MyInput' })">инпут</b-nav-item> -->
-        <!-- <b-nav-item @click="$router.push({ name: 'MyTitle' })">Ссылка 4</b-nav-item> -->
-        <b-nav-item @click="$router.push({ name: 'ProductCard' })">Карточка продукта</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'ProductList' })">Список продуктов</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'RedactPhoto' })">Изменение стилей на картинке</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'RevesText' })">Перевени меня</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'SearchName' })">Поиск имён</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'UserCard' })">Список пользователей</b-nav-item>
-        <b-nav-item href="#">Ссылка 2</b-nav-item>
-        <b-nav-item href="#" disabled>Отключено</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'ProductCard' })">карточка продукта</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'ProductList' })">список продуктов</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'RedactPhoto' })">изменение стилей на картинке</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'RevesText' })">перевени меня</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'SearchName' })">поиск имён</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'UserCard' })">список пользователей</b-nav-item>
+        <!-- <b-nav-item href="#">Ссылка 2</b-nav-item>
+        <b-nav-item href="#" disabled>Отключено</b-nav-item> -->
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -36,6 +35,9 @@ export default {
 </script>
 
  <style lang="scss" scoped>
+//  .bg-dark {
+//   position: fixed;
+//  }
 .navbar-brand {
   margin-left: 16px;
 }
