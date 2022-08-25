@@ -17,8 +17,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-input {
-  height: 25px;
-  margin-left: 40px;
-}
+
 </style>
