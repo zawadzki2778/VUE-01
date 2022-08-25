@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <navbar-bootstrap />
+    <router-view />
   </div>
 </template>
 
 <script>
 // Import Bootstrap and BootstrapVue CSS files (order is important)
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+// импорт компонент
+import NavbarBootstrap from "@/components/NavbarBootstrap.vue";
 
 export default {
   name: "App",
+  components: { NavbarBootstrap },
 };
 </script>
 
