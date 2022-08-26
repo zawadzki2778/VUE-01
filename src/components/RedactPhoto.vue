@@ -73,7 +73,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   margin-top: 40px;
-  border: 3px solid purple;
+  // border: 3px solid purple;
 }
 .flex {
   display: flex;

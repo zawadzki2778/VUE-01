@@ -31,21 +31,39 @@ export default {
       searchText: "",
       products: [
         {
-          title: "Велосипед Деревяшка",
+          title: "polygon-blue",
           price: 745,
+          imgUrl: "4876885.jpg",
           count: 33,
         },
         {
-          title: "Велосипед Космо",
+          title: "marin-sity",
           price: 666,
-          imgUrl: "../",
+          imgUrl: "18823.jpg",
           count: 51,
         },
         {
-          title: "Велосипед Яблоко",
+          title: "polygon-forest",
           price: 999,
-          imgUrl: "",
+          imgUrl: "4904045.jpg",
           count: 6,
+        },
+        {
+          title: "marin-maxxis",
+          price: 400,
+          imgUrl: "4915474.jpg",
+          count: 22,
+        },
+        {
+          title: "polygon MT Bromo",
+          price: 1200,
+          imgUrl: "MTBROMO_N8_2022.jpg",
+          count: 22,
+        },
+        {
+          title: "noname",
+          price: 771,
+          imgUrl: "4905861.jpg"
         },
       ],
     };
@@ -62,17 +80,19 @@ export default {
 .product-list {
   margin-top: 50px;
 }
+
 ul {
   display: flex;
   justify-content: space-around;
-  align-items: baseline; //сделал названия и хар-ки товаров по одной оси
+  flex-wrap: wrap;
 }
+
 button {
   background-color: rgb(221, 56, 56);
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 8px 14px;
+  padding: 6px 14px;
   cursor: pointer;
   margin-left: 10px;
 }

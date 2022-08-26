@@ -35,6 +35,6 @@ export default {
 <style lang="scss" scoped>
 .root {
   margin-top: 40px;
-  background-color: rgb(255, 190, 111);
+  background-color: rgb(221, 56, 56);
 }
 </style>

@@ -37,11 +37,10 @@ export default {
 <style lang="scss" scoped>
 img {
   width: 300px;
-  object-fit: fill;
 }
 .product-card {
   margin-top: 40px;
-  background-color: rgb(160, 212, 252);
+  background-color: #fff;
   border: 1px solid rgb(0, 47, 255);
   padding: 20px 15px;
   &__info {
@@ -53,7 +52,7 @@ button {
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 8px 14px;
+  padding: 6px 14px;
   cursor: pointer;
   margin-left: 10px;
 }

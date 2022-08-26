@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 ul {
-  border: 3px solid purple;
+  border: 3px solid  rgb(221, 56, 56);;
 }
 .items {
     text-align: center;
