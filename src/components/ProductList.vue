@@ -38,13 +38,13 @@ export default {
         {
           title: "Велосипед Космо",
           price: 666,
-          imgUrl: "/features_type5_1.jpg",
+          imgUrl: "../",
           count: 51,
         },
         {
           title: "Велосипед Яблоко",
           price: 999,
-          imgUrl: "http://moy.bike/wp-content/uploads/apple-velo.jpg",
+          imgUrl: "",
           count: 6,
         },
       ],
