@@ -78,7 +78,7 @@ export default {
 .flex {
   display: flex;
   justify-content: center;
-  border: 3px solid purple;
+  border: 3px solid rgb(221, 56, 56);
 }
 .redact {
   margin-left: 50px;
@@ -98,11 +98,18 @@ img {
     filter: sepia(100%);
   }
   &.border {
-    border: 3px solid #fffc57;
+    border: 5px solid #fffc57;
   }
 }
 button {
+  background-color: rgb(221, 56, 56);
+  color: #fff;
   margin-right: 10px;
+   border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  cursor: pointer;
+  
   &.active {
     background-color: #01609b;
   }
