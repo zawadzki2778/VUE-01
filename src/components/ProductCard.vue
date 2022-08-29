@@ -34,7 +34,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 img {
   width: 300px;
 }
@@ -52,7 +52,7 @@ button {
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 6px 14px;
+  padding: 5px 14px;
   cursor: pointer;
   margin-left: 10px;
 }

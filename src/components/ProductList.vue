@@ -86,14 +86,4 @@ ul {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
-button {
-  background-color: rgb(221, 56, 56);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 6px 14px;
-  cursor: pointer;
-  margin-left: 10px;
-}
 </style>
