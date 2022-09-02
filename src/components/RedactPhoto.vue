@@ -81,7 +81,7 @@ export default {
 .flex {
   display: flex;
   justify-content: center;
-  border: 3px solid rgb(221, 56, 56);
+  border: 1.5px solid rgb(221, 56, 56);
 }
 .redact {
   margin-left: 50px;
