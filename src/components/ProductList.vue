@@ -63,14 +63,15 @@ export default {
         {
           title: "noname",
           price: 771,
-          imgUrl: "4905861.jpg"
+          imgUrl: "4905861.jpg",
         },
       ],
     };
   },
   methods: {
     addGoods(index) {
-      console.log(index);
+      console.log(index + 1);
+      console.log(this.products);
     },
   },
 };
@@ -92,7 +93,7 @@ button {
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 6px 14px;
+  padding: 5px 14px;
   cursor: pointer;
   margin-left: 10px;
 }
