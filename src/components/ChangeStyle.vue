@@ -16,8 +16,8 @@
     </div>
     <label
       ><input type="text" v-model="color" /> введите цвет (green, red, blue,
-      orange)</label
-    >
+      orange)
+    </label>
   </div>
 </template>
 
