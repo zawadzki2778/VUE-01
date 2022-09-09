@@ -1,7 +1,6 @@
 <template>
   <b-navbar toggleable type="dark" variant="primary">
     <b-navbar-brand href="#">УЧЕБНЫЙ ПРОЕКТ</b-navbar-brand>
-
     <b-navbar-toggle target="navbar-toggle-collapse">
       <template #default="{ expanded }">
         <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
@@ -21,8 +20,6 @@
         <b-nav-item @click="$router.push({ name: 'RevesText' })">перевени меня</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'SearchName' })">поиск имён</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'UserCard' })">список пользователей</b-nav-item>
-        <!-- <b-nav-item href="#">Ссылка 2</b-nav-item>
-        <b-nav-item href="#" disabled>Отключено</b-nav-item> -->
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -35,11 +32,10 @@ export default {
 </script>
 
  <style lang="scss" scoped>
-//  .bg-dark {
-//   position: fixed;
-//  }
+ 
 .navbar-brand {
   margin-left: 16px;
+  font-size: 32px;
 }
 .navbar-toggler {
   margin-right: 16px;

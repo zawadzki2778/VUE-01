@@ -1,6 +1,5 @@
 <template>
   <div class="img">
-    <!-- <img alt="image" /> -->
     <h1>ГЛАВНАЯ СТАНИЦА</h1>
   </div>
 </template>
@@ -15,7 +14,8 @@ export default {};
   background-size: 100%;
   height: 100%;
 }
+
 h1 {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 </style>
