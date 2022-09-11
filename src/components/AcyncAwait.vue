@@ -9,7 +9,7 @@
       <button @click="userData(user)">получить</button>
       <hr />
     </div>
-    <h2>ERRORS</h2>
+    <h2>ERROR</h2>
     <div class="error" v-for="(error, index) in errors" :key="index">
       <p>{{ errors }}</p>
     </div>
@@ -22,7 +22,7 @@ export default {
   name: "AcyncAwait",
   data() {
     return {
-      title: "получаем данные с фейк-сервера",
+      title: "получаем данные от Mock HTTP Server",
       users: [],
       errors: [],
     };
