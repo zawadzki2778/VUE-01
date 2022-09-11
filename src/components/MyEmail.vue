@@ -2,12 +2,14 @@
   <div class="root">
     <label>
       введите e-mail:
-      <input type="email" :value="email" @input="addMail" />
+      <input type="email" v-model="email" @input="addMail" />
+      
     </label>
     <label>
       введите пароль:
       <input type="password" :value="password" @input="addPassword" />
     </label>
+    {{email}}
   </div>
 </template>
 

@@ -38,12 +38,15 @@
         </button>
       </div>
     </div>
+    <change-style />
   </div>
 </template>
 
 <script>
+import ChangeStyle from "./ChangeStyle.vue";
 export default {
   name: "RedactPhoto",
+  components: { ChangeStyle },
   data() {
     return {
       isVisible: true,
@@ -78,7 +81,7 @@ export default {
 .flex {
   display: flex;
   justify-content: center;
-  border: 3px solid rgb(221, 56, 56);
+  border: 1.5px solid rgb(221, 56, 56);
 }
 .redact {
   margin-left: 50px;
@@ -105,11 +108,11 @@ button {
   background-color: rgb(221, 56, 56);
   color: #fff;
   margin-right: 10px;
-   border: none;
+  border: none;
   border-radius: 4px;
   padding: 8px 14px;
   cursor: pointer;
-  
+
   &.active {
     background-color: #01609b;
   }
