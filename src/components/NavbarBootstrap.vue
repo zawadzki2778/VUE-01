@@ -12,8 +12,8 @@
       <b-navbar-nav class="ml-auto">
         <b-nav-item @click="$router.push({ name: 'MainPage' })">главная страница</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'AcyncAwait' })">запрос на сервер</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'AddCount' })">счётчик</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'MyEmail' })">e-mail и пароль</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'FirstVuex' })">запрос на сервер с использованием VUEX</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'MyEmail' })">e-mail, пароль, счётчик</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'ProductCard' })">карточка продукта</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'ProductList' })">список продуктов</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'RedactPhoto' })">изменение стилей на картинке</b-nav-item>
