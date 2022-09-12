@@ -8,14 +8,15 @@
       <button type="button" @click="increase">+</button>
     </div>
 
-    <div class="message">
-      <h3></h3>
-      <p></p>
+    <div class="message" v-for="post in allMessages" :key="post.id">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.body }}</p>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "AddCount",
   data() {
@@ -27,25 +28,27 @@ export default {
       count: 1,
     };
   },
-  computed: {
-    // для получения геттеров(в данной компоненте) обращаемся к computed
-    allMessagesTwo() {
-      // ф-ция возвращает контекcт this
-      return this.$store.getters.allMessages; // возвращаем getters allMessages из файла (modules) client.js
-    },
+
+  // ---
+  computed: mapGetters(["allMessages"]), // назв.массива д.совпадать с названием геттера из client.js
+  methods: mapActions(["fetchMessages"]),
+  async mounted() {
+    // this.$store.dispatch('fetchMessages');
+    this.fetchMessages();
   },
-  methods: {
-    increase() {
-      if (this.count < this.maxValue) {
-        this.count++;
-      }
-    },
-    decrease() {
-      if (this.count > this.minValue) {
-        this.count--;
-      }
-    },
-  },
+  // -----------*-----------*------------*----------*--------------
+  // methods: {
+  //   increase() {
+  //     if (this.count < this.maxValue) {
+  //       this.count++;
+  //     }
+  //   },
+  //   decrease() {
+  //     if (this.count > this.minValue) {
+  //       this.count--;
+  //     }
+  //   },
+  // },
 };
 </script>
 
