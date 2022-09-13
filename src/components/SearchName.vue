@@ -22,7 +22,6 @@ export default {
     return {
       enterName: "",
       users: [
-        "Виточка",
         "Женя",
         "Максим",
         "Артур",

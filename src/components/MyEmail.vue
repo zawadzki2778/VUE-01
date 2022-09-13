@@ -15,7 +15,7 @@
     <div class="count">
       <h2 v-bind:title="msg">{{ title }}</h2>
       <!--msg при наведении курсора в отдельном окне-->
-      <button type="button" @click="decrease">-</button>
+      <button class="min" type="button" @click="decrease">-</button>
       <input type="number" :value="count" :min="minValue" :max="maxValue" />
       <button type="button" @click="increase">+</button>
     </div>
@@ -34,7 +34,7 @@ export default {
       msg: "спасибо",
       minValue: 0,
       maxValue: 10,
-      count: 1,
+      count: 5,
     };
   },
   methods: {
@@ -48,7 +48,7 @@ export default {
     // --------для счётчика----------//
     increase() {
       if (this.count < this.maxValue) {
-        this.count++;
+        this.count = this.count + 0.25;
       }
     },
     decrease() {
@@ -61,7 +61,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .root {
   margin-top: 40px;
   background-color: rgb(221, 56, 56);
@@ -69,5 +68,11 @@ export default {
 
 .count {
   margin: 30px auto;
+}
+.min {
+  margin-right: 10px;
+}
+input {
+  text-align: center;
 }
 </style>

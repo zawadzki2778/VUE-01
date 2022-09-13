@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="message" v-for="post in allMessages" :key="post">
+    <div class="message" v-for="post in allMessages" :key="post.id">
       <h3>{{ post.title }}</h3>
-      <p>{{ post.description }}</p>
+      <img :src="post.url" /> <!-- для получения изображения прописываем в src и вешаем v-bind -->
     </div>
   </div>
 </template>
@@ -20,7 +20,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .container {
   margin: 0px auto;
   text-align: center;
@@ -32,5 +31,12 @@ export default {
   border-radius: 5px;
   margin: 20px auto;
   width: 600px;
+}
+
+img {
+  display: block;
+  margin: 0 auto 10px;
+  height: 50px;
+  width: 150px;
 }
 </style>
