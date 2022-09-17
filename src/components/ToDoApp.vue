@@ -1,13 +1,15 @@
 <template>
   <div class="container">
     <input type="text" @keyup.enter="addTask" v-model="nowTask" />
+    <!--при клике на enter срабатывает обработчик-->
     <ul>
       <li
         v-for="(task, index) in tasks"
         :key="index"
         :class="{ strike: task.isDone }"
       >
-        <span>{{ task.text }}</span>
+        <span @click="task.isDone = !task.isDone">{{ task.text }}</span>
+        <button type="buttton" @click="deliteTask(task.text)">x</button>
       </li>
     </ul>
   </div>
@@ -47,12 +49,16 @@ export default {
       });
       this.nowTask = ""; //что-бы обнулять форму, после того как мы добавим значение
     },
+    deliteTask(taskText) { //параметр в ф-ции = task.text
+      this.tasks = this.tasks.filter((task) => {
+        return task.text !== taskText;
+      });
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .container {
   width: 600px;
 }
