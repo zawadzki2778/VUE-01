@@ -7,7 +7,7 @@ import MyEmail from './components/MyEmail.vue';
 import ProductCard from './components/ProductCard.vue';
 import ProductList from './components/ProductList.vue';
 import RedactPhoto from './components/RedactPhoto.vue';
-import RevesText from './components/ReversText.vue';
+import ToDoApp from './components/ToDoApp.vue';
 import SearchName from './components/SearchName.vue';
 import UserCard from './components/UserCard.vue';
 
@@ -20,7 +20,7 @@ export default new VueRouter({
     { path: '/4', component: ProductCard, name: 'ProductCard' },
     { path: '/5', component: ProductList, name: 'ProductList' },
     { path: '/6', component: RedactPhoto, name: 'RedactPhoto' },
-    { path: '/7', component: RevesText, name: 'RevesText' },
+    { path: '/7', component: ToDoApp, name: 'ToDoApp' },
     { path: '/8', component: SearchName, name: 'SearchName' },
     { path: '/9', component: UserCard, name: 'UserCard' },
   ],

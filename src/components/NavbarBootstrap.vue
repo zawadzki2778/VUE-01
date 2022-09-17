@@ -17,7 +17,7 @@
         <b-nav-item @click="$router.push({ name: 'ProductCard' })">карточка продукта</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'ProductList' })">список продуктов</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'RedactPhoto' })">изменение стилей на картинке</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'RevesText' })">перевени меня</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'ToDoApp' })">список дел</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'SearchName' })">поиск имён</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'UserCard' })">список пользователей</b-nav-item>
       </b-navbar-nav>
