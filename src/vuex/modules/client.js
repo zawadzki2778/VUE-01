@@ -9,7 +9,7 @@ export default {
     }
   },
   mutations: {
-    newPosts(state, posts) { //первый параметр всегда state, второй - то, что будем передавать (в наш.сл. - массив posts)
+    newPosts(state, posts) { //первый параметр всегда state, второй - это просто данные, которые будут использоваться для обновления состояния. (в наш.сл. - массив posts)
       state.posts = posts;
     }
   },

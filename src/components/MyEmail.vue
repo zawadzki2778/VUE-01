@@ -15,9 +15,10 @@
     <div class="count">
       <h2 v-bind:title="msg">{{ title }}</h2>
       <!--msg при наведении курсора в отдельном окне-->
-      <button class="min" type="button" @click="decrease">-</button>
-      <input type="number" :value="count" :min="minValue" :max="maxValue" />
+      <button type="button" class="min" @click="decrease">-</button>
+      <input :min="minValue" :max="maxValue" :value="count" />
       <button type="button" @click="increase">+</button>
+      <button type="button" @click="reset">reset</button>
     </div>
   </div>
 </template>
@@ -48,13 +49,16 @@ export default {
     // --------для счётчика----------//
     increase() {
       if (this.count < this.maxValue) {
-        this.count = this.count + 0.25;
+        this.count++;
       }
     },
     decrease() {
       if (this.count > this.minValue) {
         this.count--;
       }
+    },
+    reset() {
+     this.count = 0;
     },
   },
 };

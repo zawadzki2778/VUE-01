@@ -12,7 +12,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name: "FirstVuex",
   computed: mapGetters(["allMessages"]), // назв.массива д.совпадать с названием геттера из client.js
-  methods: mapActions(["fetchMessages"]),
+  methods: mapActions(["fetchMessages"]), // параметр - это метод из actions
   async mounted() {
     this.fetchMessages();
   },
