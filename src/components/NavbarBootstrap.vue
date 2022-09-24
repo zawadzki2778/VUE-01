@@ -19,7 +19,7 @@
         <b-nav-item @click="$router.push({ name: 'RedactPhoto' })">изменение стилей на картинке</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'ToDoApp' })">список дел</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'SearchName' })">поиск имён</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'UserCard' })">список пользователей</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'TwoForms' })">формы регистрации и авторизации</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

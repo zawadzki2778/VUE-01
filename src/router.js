@@ -1,5 +1,4 @@
 import VueRouter from 'vue-router'
-
 import MainPage from './components/MainPage.vue';
 import AcyncAwait from './components/AcyncAwait.vue';
 import FirstVuex from './components/FirstVuex.vue';
@@ -9,7 +8,7 @@ import ProductList from './components/ProductList.vue';
 import RedactPhoto from './components/RedactPhoto.vue';
 import ToDoApp from './components/ToDoApp.vue';
 import SearchName from './components/SearchName.vue';
-import UserCard from './components/UserCard.vue';
+import TwoForms from './components/TwoForms.vue';
 
 export default new VueRouter({
   routes: [
@@ -22,7 +21,7 @@ export default new VueRouter({
     { path: '/6', component: RedactPhoto, name: 'RedactPhoto' },
     { path: '/7', component: ToDoApp, name: 'ToDoApp' },
     { path: '/8', component: SearchName, name: 'SearchName' },
-    { path: '/9', component: UserCard, name: 'UserCard' },
+    { path: '/9', component: TwoForms, name: 'TwoForms' },
   ],
   mode: 'history'
 }) 

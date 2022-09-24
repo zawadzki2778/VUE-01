@@ -16,6 +16,7 @@ export default {
   props: {
     title: String,
     price: Number,
+
     imgUrl: {
       type: String,
       default:
@@ -24,6 +25,7 @@ export default {
     count: {
       type: Number,
       default: 0,
+      require: true,
     },
   },
   methods: {
