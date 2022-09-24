@@ -15,12 +15,23 @@ export default {
   name: "TwoForms",
   data() {
     return {
-      component: "AuthForm",
+      component: "AuthForm", //форму авторизацииации ставлю по умолчания для отображения первой//
     };
   },
   methods: {},
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.forms {
+  max-width: 400px;
+  margin: 20px auto;
+  border: 2px solid black;
+}
+button {
+  margin: 8px;
+}
+label {
+  margin-right: 5px;
+}
 </style>

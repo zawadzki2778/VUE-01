@@ -2,15 +2,15 @@
   <form method="post">
     <h2>Регистрация</h2>
     <p>
-      <label for="name">твоё имя:</label>
+      <label for="name">имя: </label>
       <input id="name" type="text" value="">
     </p>
     <p>
-      <label for="password">твой пароль:</label>
+      <label for="password">пароль: </label>
       <input id="password" type="text" value="">
     </p>
     <p>
-      <label for="mail">твой e-mail:</label>
+      <label for="mail">e-mail: </label>
       <input id="mail" type="text" value="">
     </p>
     <button type="button" name="button">Зарегистрироваться</button>
@@ -28,4 +28,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>
