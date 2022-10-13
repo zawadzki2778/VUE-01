@@ -29,12 +29,25 @@
     <div class="form-group">
       <label for="country">Страна проживания:</label>
       <select id="country" class="form-control" v-model="country">
-         <option v-for="(country, index) in countries" :key="index" :value="country.value"> <!--привязываем наши значения к option-->
-          {{ country.label }} 
+        <option
+          v-for="(country, index) in countries"
+          :key="index"
+          :value="country.value"
+        >
+          <!-- :value - привязываем наши значения к option-->
+          {{ country.label }}
         </option>
       </select>
     </div>
-
+    <!-- select с возможностью выбора нескольких тем одновременно -->
+    <div class="form-group">
+      <label for="themes">Любимые темы:</label>
+      <select id="themes" class="form-control" v-model="FavoriteThemes" multiple>
+        <option v-for="(theme, index) in themes" :key="index">
+          {{ theme.label }}
+        </option>
+      </select>
+    </div>
   </form>
 </template>
 
@@ -46,7 +59,8 @@ export default {
       login: "",
       email: "",
       password: "",
-      country: "",
+      country: "Belarus", // 1.связвваем с v-model 2.можно поставить страну из массива, которая будет отображаться по умолчанию
+      FavoriteThemes: ["science"],
       countries: [
         {
           label: "Беларусь",
@@ -59,6 +73,20 @@ export default {
         {
           label: "Польша",
           value: "Poland",
+        },
+      ],
+      themes: [
+        {
+          label: "наука",
+          value: "science",
+        },
+        {
+          label: "искусство",
+          value: "art",
+        },
+        {
+          label: "спорт",
+          value: "sport",
         },
       ],
     };

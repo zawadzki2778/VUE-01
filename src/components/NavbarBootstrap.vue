@@ -20,7 +20,7 @@
         <b-nav-item @click="$router.push({ name: 'ToDoApp' })">список дел</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'SearchName' })">поиск имён</b-nav-item>
         <b-nav-item @click="$router.push({ name: 'TwoForms' })">формы регистрации и авторизации</b-nav-item>
-        <b-nav-item @click="$router.push({ name: 'FormWork' })">фора с инпутом, чекбоксои и радиокнопкой</b-nav-item>
+        <b-nav-item @click="$router.push({ name: 'FormWork' })">форма с инпутом, чекбоксои и радиокнопкой</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
