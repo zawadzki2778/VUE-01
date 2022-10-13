@@ -2,17 +2,23 @@
   <form class="sign-up">
     <div class="form-group">
       <label for="login">Логин:</label>
-      <input id="login" class="form-control" />
+      <input id="login" class="form-control" v-model.trim="login" />
+      <p>{{ login }}</p>
     </div>
 
     <div class="form-group">
       <label for="login">Почта:</label>
-      <input id="email" type="email" class="form-control" />
+      <input id="email" type="email" class="form-control" v-model.trim="email" />
     </div>
 
     <div class="form-group">
       <label for="login">Пароль:</label>
-      <input id="password" type="password" class="form-control" />
+      <input
+        id="password"
+        type="password"
+        class="form-control"
+        v-model.trim="password"
+      />
     </div>
   </form>
 </template>
@@ -21,7 +27,11 @@
 export default {
   name: "FormWork",
   data() {
-    return {};
+    return {
+      login: "",
+      email: "",
+      password: "",
+    };
   },
 };
 </script>
@@ -32,9 +42,6 @@ export default {
   text-align: left;
   max-width: 500px;
 }
-// .form-control {
-//   width: 400px;
-// }
 
 button {
   margin-top: 15px;
