@@ -45,14 +45,40 @@
       <select
         id="themes"
         class="form-control"
-        v-model="FavoriteThemes"
-        multiple 
-       > <!--multiple -> для выбора нескольких вариантов из списка (с привязкой к массиву) -->
+        v-model="favoriteThemes"
+        multiple
+      >
+        <!--multiple -> для выбора нескольких вариантов из списка (с привязкой к массиву) -->
         <option v-for="(theme, index) in themes" :key="index">
           {{ theme.label }}
         </option>
       </select>
     </div>
+    <!-- отображаю два режима работы с чебоксарами -->
+    <!-- 1. через один checkbox -> связываем его с булевой переменной через v-model -->
+    <div class="form-group form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="notification"
+        v-model="agreeSendEmail"
+      />
+      <label class="form-check-label" for="notification"
+        >Уведомлять меня о чём то новом</label
+      >
+    </div>
+    <!-- 2. когда несколько checkboxes -->
+    <div class="two-checkbox">
+      <div class="form-group form-check">
+        <input type="checkbox" value="one" class="form-check-input" id="notification-one" v-model="inform"/>
+        <label class="form-check-label" for="notification-one">уведомлять </label>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" value="two" class="form-check-input" id="notification-two" v-model="inform"/>
+        <label class="form-check-label" for="notification-two">не уведомлять</label>
+      </div>
+    </div>
+
   </form>
 </template>
 
@@ -65,7 +91,7 @@ export default {
       email: "",
       password: "",
       country: "Belarus", // 1.связвваем с v-model 2.можно поставить страну из массива, которая будет отображаться по умолчанию
-      FavoriteThemes: [],
+      favoriteThemes: [],
       countries: [
         {
           label: "Беларусь",
@@ -94,6 +120,8 @@ export default {
           value: "sport",
         },
       ],
+      agreeSendEmail: true, // 1. для первого вариантау checkbox
+      inform: [], //2. для второго варианта
     };
   },
 };
@@ -102,14 +130,19 @@ export default {
 <style lang="scss" scoped>
 .sign-up {
   margin: 30px auto;
+  padding-bottom: 20px; //добавил чтобы низ края окна не сливался с открытой консолью
 }
 .form-group {
   margin: 15px auto;
   text-align: left;
   max-width: 500px;
 }
-
-button {
-  margin-top: 15px;
+.two-checkbox{
+  display: flex;
+  // justify-content: space-around;
 }
+
+// button {
+//   margin-top: 15px;
+// }
 </style>
