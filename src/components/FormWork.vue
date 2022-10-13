@@ -42,7 +42,12 @@
     <!-- select с возможностью выбора нескольких тем одновременно -->
     <div class="form-group">
       <label for="themes">Любимые темы:</label>
-      <select id="themes" class="form-control" v-model="FavoriteThemes" multiple>
+      <select
+        id="themes"
+        class="form-control"
+        v-model="FavoriteThemes"
+        multiple 
+       > <!--multiple -> для выбора нескольких вариантов из списка (с привязкой к массиву) -->
         <option v-for="(theme, index) in themes" :key="index">
           {{ theme.label }}
         </option>
@@ -60,7 +65,7 @@ export default {
       email: "",
       password: "",
       country: "Belarus", // 1.связвваем с v-model 2.можно поставить страну из массива, которая будет отображаться по умолчанию
-      FavoriteThemes: ["science"],
+      FavoriteThemes: [],
       countries: [
         {
           label: "Беларусь",
@@ -95,8 +100,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.form-group {
+.sign-up {
   margin: 30px auto;
+}
+.form-group {
+  margin: 15px auto;
   text-align: left;
   max-width: 500px;
 }
