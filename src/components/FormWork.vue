@@ -50,12 +50,14 @@
       >
         <!--multiple -> для выбора нескольких вариантов из списка (с привязкой к массиву) -->
         <option v-for="(theme, index) in themes" :key="index">
+          <!-- option - Тег определяет отдельные пункты списка, создаваемого с помощью контейнера select-->
           {{ theme.label }}
         </option>
       </select>
     </div>
-    <!-- отображаю два режима работы с чебоксарами -->
-    <!-- 1. через один checkbox -> связываем его с булевой переменной через v-model -->
+    <!-- отображаю два режима работы с checkbox -->
+    <!-- 1. через один checkbox -->
+    <!--связываем его с булевой переменной через v-model -->
     <div class="form-group form-check">
       <input
         type="checkbox"
@@ -67,18 +69,29 @@
         >Уведомлять меня о чём то новом</label
       >
     </div>
-    <!-- 2. когда несколько checkboxes -->
+    <!-- 2. когда несколько checkbox делаем через переменную с пустым массивом. должны быть полe value и разные ID   -->
     <div class="two-checkbox">
       <div class="form-group form-check">
-        <input type="checkbox" value="one" class="form-check-input" id="notification-one" v-model="inform"/>
-        <label class="form-check-label" for="notification-one">уведомлять </label>
+        <input
+          type="radio"
+          value="one"
+          class="form-check-input"
+          id="one"
+          v-model="info"
+        />
+        <label class="form-check-label" for="one">уведомлять </label>
       </div>
       <div class="form-group form-check">
-        <input type="checkbox" value="two" class="form-check-input" id="notification-two" v-model="inform"/>
-        <label class="form-check-label" for="notification-two">не уведомлять</label>
+        <input
+          type="radio"
+          value="two"
+          class="form-check-input"
+          id="two"
+          v-model="info"
+        />
+        <label class="form-check-label" for="two">не уведомлять</label>
       </div>
     </div>
-
   </form>
 </template>
 
@@ -94,8 +107,8 @@ export default {
       favoriteThemes: [],
       countries: [
         {
-          label: "Беларусь",
-          value: "Belarus",
+          label: "Беларусь", // то что видит пользователь //
+          value: "Belarus", // то что уходит на сервер //
         },
         {
           label: "Россия",
@@ -120,8 +133,10 @@ export default {
           value: "sport",
         },
       ],
-      agreeSendEmail: true, // 1. для первого вариантау checkbox
-      inform: [], //2. для второго варианта
+      info: "one",
+      // 1. для первого вариантау checkbox
+      agreeSendEmail: true,
+      //2. для второго варианта
     };
   },
 };
@@ -137,12 +152,9 @@ export default {
   text-align: left;
   max-width: 500px;
 }
-.two-checkbox{
+.two-checkbox {
   display: flex;
-  // justify-content: space-around;
+  width: 500px;
+  margin: 0 auto;
 }
-
-// button {
-//   margin-top: 15px;
-// }
 </style>
